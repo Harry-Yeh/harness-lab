@@ -124,13 +124,14 @@ harness-lab/
 │
 ├── src/
 │
-├── docs/
-│   ├── adr/
-│   └── architecture/
-│
+├── .gitignore
 ├── package.json
+├── package-lock.json
 ├── tsconfig.json
 └── README.md
+```
+
+Additional documentation, architecture records and sprint planning are currently maintained in Notion.
 ```
 
 ---
