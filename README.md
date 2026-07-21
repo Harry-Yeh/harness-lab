@@ -89,7 +89,7 @@ Harness
 
 - Ubuntu 24.04 LTS
 - Node.js 24 LTS
-- TypeScript 7
+- TypeScript 5
 
 ## Agent Framework
 
