@@ -1,4 +1,5 @@
 import { Annotation, END, START, StateGraph } from '@langchain/langgraph';
+import { askLLM } from '../services/llm-service.js';
 
 const StateAnnotation = Annotation.Root({
   dailyLog: Annotation<string>,
@@ -17,8 +18,19 @@ function collectLog() {
 async function analyzeTasks(state: typeof StateAnnotation.State) {
   console.log('[Analyze Tasks]');
 
+  const analysis = await askLLM(`
+    You are a project assistant.
+
+    Read the following daily log.
+
+    Suggest 3 next tasks.
+
+    Daily Log:
+    ${state.dailyLog}
+    `);
+
   return {
-    analysis: '',
+    analysis,
   };
 }
 
