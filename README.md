@@ -2,39 +2,38 @@
 
 > Agent = LLM (2%) + Harness (98%)
 
-Harness-Lab 是一個專注於 Agent Engineering 與 Skill Harness Engineering 的個人實驗室。
+Harness-Lab is a personal AI Agent Engineering and Skill Harness Engineering laboratory.
 
-本專案的目標並非打造單純的聊天機器人，而是建構具備：
+The goal of this project is not to build a chatbot, but to develop a practical Agent Engineering foundation focused on:
 
-- State Machine
+- State Management
+- Workflow Orchestration
 - Tool Calling
-- Browser Automation
 - Error Recovery
-- Memory System
-- Self-Improvement Loop
-
-能力的 AI Agent 基座工程（Skill Harness）。
+- Reliability Engineering
+- Memory Systems
+- Agent Evolution
 
 ---
 
 # 🎯 Vision
 
-我相信：
+I believe:
 
-> Prompt Engineering 只是起點。
+> Prompt Engineering is only the starting point.
 >
-> 真正的 Agent 能力來自 Harness。
+> Real Agent capability comes from the Harness.
 
-Agent 的價值主要來自：
+Most of an Agent's value comes from:
 
-- 工作流程管理
-- 狀態控制
-- 記憶體架構
-- 工具調用能力
-- 錯誤恢復機制
-- 行為優化閉環
+- Workflow Design
+- State Control
+- Tool Integration
+- Memory Architecture
+- Error Recovery
+- Feedback Loops
 
-而非單純依靠大型語言模型本身。
+rather than the language model itself.
 
 ---
 
@@ -42,25 +41,74 @@ Agent 的價值主要來自：
 
 ## Notion Autonomous Board Manager
 
-第一個驗證場景為：
+The first validation project is:
 
-**Notion 全自動化看板管家**
+**Notion Autonomous Board Manager**
 
-目標讓 AI Agent 能夠：
+The goal is to enable an AI Agent to:
 
-1. 讀取每日輸入資料
-2. 分析待辦事項
-3. 自主登入 Notion
-4. 建立任務
-5. 更新任務狀態
-6. 驗證執行結果
-7. 累積經驗並持續優化
+1. Read Daily Logs
+2. Analyze Tasks
+3. Generate Structured Output
+4. Create Tasks in Notion
+5. Update Task Status
+6. Verify Execution Results
+7. Learn from Past Actions
 
-最終形成：
+Ultimately forming the loop:
 
+```text
 Observe → Reason → Act → Verify → Learn
+```
 
-的完整閉環。
+---
+
+# ✅ Current Status
+
+## Completed Sprints
+
+- ✅ SPR-01 Foundation Setup
+- ✅ SPR-02 Agent Foundation
+
+## Completed PBIs
+
+- ✅ PBI-01 ~ PBI-12
+
+## Current Focus
+
+Preparing SPR-03:
+
+- Structured Output
+- Notion Integration
+- Tool Calling
+- Task Creation Agent
+
+---
+
+# 🤖 Current Agent Capability
+
+Current implemented workflow:
+
+```text
+Daily Log
+↓
+Collect Log
+↓
+Summarize Log
+↓
+Suggest Tasks
+↓
+Output
+```
+
+Implemented capabilities:
+
+- LangGraph Workflow
+- OpenRouter Integration
+- Task Analysis Agent
+- Agent Workflow MVP
+- Retry Strategy
+- Model Failover
 
 ---
 
@@ -72,12 +120,12 @@ Agent
 └── Harness (98%)
 
 Harness
-├── State Machine
+├── State Management
+├── Workflow Engine
 ├── Tool Calling
-├── Browser Layer
 ├── Memory System
 ├── Error Recovery
-├── Observability
+├── Reliability
 └── Self Evolution
 ```
 
@@ -89,27 +137,19 @@ Harness
 
 - Ubuntu 24.04 LTS
 - Node.js 24 LTS
-- TypeScript 5
+- TypeScript 5.9
 
 ## Agent Framework
 
 - LangGraph
 
-## Browser Automation
+## LLM Gateway
 
-- Puppeteer
-- Browser Use
-- Stagehand
-- Browserbase
+- OpenRouter
 
-## Database
+## Utilities
 
-- MongoDB Atlas
-
-## Monitoring
-
-- Sentry
-- Datadog
+- dotenv
 
 ## Project Management
 
@@ -123,110 +163,90 @@ Harness
 harness-lab/
 │
 ├── src/
+│   ├── agents/
+│   └── services/
 │
-├── .gitignore
+├── docs/
+│   ├── 01-development-skill.md
+│   ├── 02-project-context.md
+│   ├── 03-product-backlog.md
+│   ├── 04-notion-schema.md
+│   ├── 05-repository-structure.md
+│   └── 06-handoff.md
+│
+├── dist/
 ├── package.json
-├── package-lock.json
 ├── tsconfig.json
 └── README.md
-```
-
-Additional documentation, architecture records and sprint planning are currently maintained in Notion.
 ```
 
 ---
 
 # 📅 Roadmap
 
-## Sprint 1 - Foundation Setup
+## ✅ Completed
 
-- [x] WSL2 / Ubuntu 開發環境建置
-- [x] Node.js 24 安裝與版本管理
-- [x] TypeScript 專案初始化
-- [ ] Strict Mode 與 ESLint
-- [ ] Git Repository 建置
-- [ ] Async/Await Demo
+### SPR-01 Foundation Setup
 
----
+- WSL2 / Ubuntu Environment
+- Node.js Setup
+- TypeScript Project Initialization
+- ESLint Configuration
+- Git Workflow
+- Async/Await Validation
 
-## Sprint 2 - Agent Foundation
+### SPR-02 Agent Foundation
 
-- [ ] LangGraph Hello World
-- [ ] State Graph Concept Validation
-- [ ] Tool Calling
-- [ ] Retry Mechanism
-- [ ] Structured Output
-
----
-
-## Sprint 3 - Browser Automation
-
-- [ ] Puppeteer Hello World
-- [ ] Browser Use Evaluation
-- [ ] Stagehand Evaluation
-- [ ] Browserbase Integration
+- LangGraph Introduction
+- StateGraph Validation
+- Multi-Node Workflow
+- LLM Integration
+- Task Analysis Agent
+- Agent Workflow MVP
 
 ---
 
-## Sprint 4 - Notion Integration
+## 🚧 Upcoming
 
-- [ ] Notion API Authentication
-- [ ] Read Database
-- [ ] Create Task
-- [ ] Update Task Status
-- [ ] Board Synchronization
+### SPR-03 Notion Agent Foundation
 
----
+- PBI-13 Structured Output
+- PBI-14 Notion API Authentication
+- PBI-15 Read Notion Database
 
-## Sprint 5 - Workflow Engine
+### Future
 
-- [ ] Raw Data Parser
-- [ ] Task Planning Agent
-- [ ] Execution Agent
-- [ ] Feedback Agent
-
----
-
-## Sprint 6+ - Evolution
-
-- [ ] Working Memory
-- [ ] Long-Term Memory
-- [ ] Verbalized Feedback
-- [ ] ADR Generator
-- [ ] Skill Self-Evolution
-
----
-
-# 📊 Current Progress
-
-## Current Sprint
-
-SPR-01
-
-## Current Goal
-
-建立可開發的 TypeScript Agent 專案基座。
-
-## Completed
-
-- ✅ PBI-01 WSL2 / Ubuntu 開發環境建置
-- ✅ PBI-02 Node.js 24 安裝與版本管理
-- ✅ PBI-03 TypeScript 專案初始化
-
-## Current PBI
-
-- 🎯 PBI-04 Strict Mode 與 ESLint
+- Create Task in Notion
+- Update Task Status
+- Tool Calling
+- Task Creation Agent
+- Workflow Engine
+- Memory System
+- Self Evolution
 
 ---
 
 # 📚 Documentation
 
-重要技術決策與架構說明透過以下文件管理：
+Project documentation is maintained in:
 
-- Architecture Decision Records (ADR)
+```text
+docs/
+├── Development Skill
+├── Project Context
+├── Product Backlog
+├── Notion Schema
+├── Repository Structure
+└── Handoff
+```
+
+Additional project management artifacts are maintained in Notion:
+
+- Product Backlog
+- Sprint Backlog
+- ADR Database
 - Architecture Wiki
-- Sprint Planning
-- Development Logs
+- Daily Log
 - Lessons Learned
 
 ---
@@ -235,49 +255,56 @@ SPR-01
 
 ## WIP = 1
 
-任何時間僅允許一項工作處於開發狀態。
+Only one PBI may be actively developed at a time.
 
-避免多工與上下文切換造成的效率損失。
+Avoid context switching and parallel feature development.
 
 ---
 
 ## Definition of Done
 
-每個 PBI 完成時必須達成：
+A PBI is considered complete only when:
 
-- 功能正常運作
-- 無阻塞性錯誤
-- Git Commit 完成
-- ADR 更新（如適用）
-- 文件同步更新
+- TypeScript compiles successfully
+- Feature runs successfully
+- Expected output is verified
+- Code is committed
+- Documentation is updated when needed
 
 ---
 
 ## MVP First
 
-優先完成可運作的 MVP。
+Prioritize:
 
-避免過早投入：
+```text
+Working
+↓
+Validated
+↓
+Improved
+```
 
-- 過度抽象化
-- 過度優化
-- 複雜自我進化機制
+Avoid:
+
+- Premature Optimization
+- Over Engineering
+- Unnecessary Abstractions
 
 ---
 
 # 🤝 Why This Project?
 
-Harness-Lab 同時是一個：
+Harness-Lab is simultaneously:
 
-- AI Agent Engineering 學習計畫
-- Skill Harness Engineering 實驗室
-- 軟體工程實戰作品集
-- 長期開源研究專案
+- An AI Agent Engineering learning journey
+- A Skill Harness Engineering laboratory
+- A software engineering portfolio project
+- A long-term experimental platform
 
-透過實際開發驗證：
+The objective is to answer:
 
-> 如何讓 AI 從單純的模型，
-> 進化成真正能夠工作的 Agent。
+> How do we evolve AI from a language model into a reliable working Agent?
 
 ---
 
